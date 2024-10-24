@@ -58,7 +58,7 @@ class _HomepageState extends State<Homepage> {
                 return Container(
                   width: 400,
                   margin: const EdgeInsets.only(right: 25),
-                  color: Colors.blue[300],
+                  color: Colors.grey[300],
                   child: Center(child: Text("Container $index")),
                 );
               },
