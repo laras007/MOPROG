@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gebooks/homepage.dart';
 import 'package:gebooks/searchpage.dart';
+import 'package:gebooks/librarypage.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Homepage(),
+      home: LibraryPage(),
     );
   }
 }
