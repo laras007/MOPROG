@@ -8,16 +8,6 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  int _currentIndex =
-      1; // Index untuk BottomNavigationBar, default ke halaman Search
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-      // Logika navigasi bisa ditambahkan di sini jika ada beberapa halaman
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,30 +75,6 @@ class _SearchPageState extends State<SearchPage> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex, // Menggunakan currentIndex dari state
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-        onTap: _onItemTapped, // Memanggil fungsi saat item ditekan
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "Search",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: "Books",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
-          ),
-        ],
       ),
     );
   }
